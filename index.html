@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Referências e Redes</title>
+    <style>
+      body {
+        background-color: #111;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 40px 20px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        color: #e60000;
+        margin-bottom: 40px;
+        font-size: 2.5em;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+
+      .card {
+        background-color: #1b1b1b;
+        border: 1px solid #e60000;
+        border-radius: 12px;
+        padding: 30px 40px;
+        max-width: 400px;
+        width: 90%;
+        text-align: center;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 25px;
+        background-color: #e60000;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #ff1a1a;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .links a {
+        background-color: #2a2a2a;
+        padding: 10px;
+        border-radius: 8px;
+        color: #fff;
+        text-decoration: none;
+        transition: background 0.3s;
+        font-weight: bold;
+      }
+
+      .links a:hover {
+        background-color: #e60000;
+      }
+
+      .creator {
+        margin-top: 30px;
+        background: linear-gradient(145deg, #1e1e1e, #151515);
+        border: 2px solid #e60000;
+        padding: 20px 30px;
+        border-radius: 15px;
+        font-size: 1.2em;
+        font-weight: bold;
+        cursor: pointer;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+      }
+
+      .creator:hover {
+        transform: rotateY(10deg) scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>REFERÊNCIAS</h1>
+
+    <div class="card">
+      <p>
+        Confira todas as referências, feedbacks e provas de vendas diretamente
+        no nosso canal oficial do Telegram.
+      </p>
+      <a class="btn" href="https://t.me/+uFFspjkTUqdkZmZh" target="_blank"
+        >VER REFERÊNCIAS</a
+      >
+    </div>
+
+    <div class="card">
+      <h2>REDES SOCIAIS</h2>
+      <div class="links">
+        <a href="https://br.pinterest.com/APELAWAR71/" target="_blank"
+          >Pinterest</a
+        >
+        <a href="https://m.youtube.com/watch?v=Ofcj5Z1BLxc" target="_blank"
+          >YouTube</a
+        >
+        <a href="https://beacons.ai/overbanofc7" target="_blank"
+          >Canal de Vendas</a
+        >
+        <a href="https://t.me/OVERBANSUPORTE_BOT" target="_blank"
+          >Suporte Telegram</a
+        >
+      </div>
+    </div>
+
+    <a href="https://t.me/ApelaWar71" class="creator" target="_blank">
+      CRIADO PELO: @ApelaWar71
+    </a>
+
+    <div class="card">
+      <h2>PLAYLIST DO YOUTUBE</h2>
+      <div class="links">
+        <a
+          href="https://youtube.com/playlist?list=PL_f7RUqsnlcF5inJCuZdVsN-jd4qsTXNM&si=1wKVTo4OUVgLIbkF"
+          target="_blank"
+          >Temas Xiaomi</a
+        >
+        <a
+          href="https://youtu.be/Ofcj5Z1BLxc?si=T8uffoqmoCrg72BY"
+          target="_blank"
+          >Vídeos Desbanir WhatsApp</a
+        >
+      </div>
+    </div>
+
+    <div class="card" id="gerador-card">
+      <h2>GERADOR DE ASSUNTO E TEXTO</h2>
+      <p>
+        Gere automaticamente um assunto e mensagem para solicitar suporte sobre
+        número banido.
+      </p>
+      <button class="btn" onclick="gerarTexto()">GERAR TEXTO</button>
+      <div id="output" style="margin-top: 15px"></div>
+    </div>
+
+    <div class="card">
+      <h2>GERADOR DE E-MAIL DO SUPORTE WHATSAPP</h2>
+      <p>
+        Clique nos e-mails abaixo para abrir seu app de envio com o endereço
+        preenchido automaticamente.
+      </p>
+      <div class="links">
+        <a href="mailto:support@whatsapp.com">support@whatsapp.com</a>
+        <a href="mailto:android_web@support.whatsapp.com"
+          >android_web@support.whatsapp.com</a
+        >
+        <a href="mailto:security@whatsapp.com">security@whatsapp.com</a>
+        <a href="mailto:privacy@support.whatsapp.com"
+          >privacy@support.whatsapp.com</a
+        >
+        <a href="mailto:legal@support.whatsapp.com"
+          >legal@support.whatsapp.com</a
+        >
+      </div>
+    </div>
+
+    <div class="card" id="pesquisar-apela">
+      <h2>PESQUISAR SOBRE O APELA WAR</h2>
+      <p>
+        Clique no botão abaixo para descobrir mais sobre mim e minha trajetória.
+      </p>
+      <button
+        class="btn"
+        style="background-color: #28a745"
+        onclick="pesquisarApela()"
+      >
+        PESQUISAR
+      </button>
+      <div
+        id="loading-bar"
+        style="
+          display: none;
+          margin-top: 15px;
+          width: 100%;
+          background-color: #333;
+          border-radius: 8px;
+        "
+      >
+        <div
+          id="bar"
+          style="
+            width: 0%;
+            height: 10px;
+            background-color: #28a745;
+            border-radius: 8px;
+          "
+        ></div>
+      </div>
+      <div id="resultado-apela" style="margin-top: 20px; display: none"></div>
+    </div>
+
+    <!-- NOVO CARD: CONSULTAR DADOS -->
+    <div class="card" id="consulta-card">
+      <h2>CONSULTAR DADOS</h2>
+      <p>Escolha o tipo e insira a informação para consulta:</p>
+      <div style="text-align: left; margin-top: 10px">
+        <label
+          ><input type="radio" name="tipoConsulta" value="telefone" checked />
+          Telefone</label
+        ><br />
+        <label
+          ><input type="radio" name="tipoConsulta" value="email" />
+          E‑mail</label
+        ><br />
+        <label
+          ><input type="radio" name="tipoConsulta" value="cpf" /> CPF</label
+        >
+      </div>
+      <input
+        type="text"
+        id="consulta-input"
+        placeholder="Digite aqui..."
+        style="
+          width: 100%;
+          margin-top: 15px;
+          padding: 8px;
+          border-radius: 6px;
+          border: 1px solid #444;
+          background: #222;
+          color: #fff;
+        "
+      />
+      <button class="btn" style="margin-top: 15px" onclick="consultarDados()">
+        PESQUISAR
+      </button>
+
+      <div
+        id="consulta-loading"
+        style="
+          display: none;
+          margin-top: 15px;
+          width: 100%;
+          background: #333;
+          border-radius: 8px;
+        "
+      >
+        <div
+          id="consulta-bar"
+          style="
+            width: 0%;
+            height: 10px;
+            background-color: #e60000;
+            border-radius: 8px;
+          "
+        ></div>
+      </div>
+      <div
+        id="consulta-result"
+        style="margin-top: 20px; display: none; text-align: left"
+      ></div>
+    </div>
+
+    <script>
+      const textos = [
+        "Preciso de ajuda, meu WhatsApp foi banido repentinamente!",
+        "Fui banido injustamente e preciso de suporte urgente!",
+        "Meu número foi banido e gostaria de recuperá-lo o mais rápido possível.",
+        "Solicito revisão imediata do meu número banido!",
+        "Ajuda! Meu WhatsApp foi bloqueado sem motivo aparente!",
+      ];
+
+      let contador = 0;
+
+      function gerarTexto() {
+        const output = document.getElementById("output");
+        const card = document.getElementById("gerador-card");
+
+        if (contador < textos.length) {
+          const texto = `<strong>Assunto:</strong> Meu WhatsApp foi banido<br>
+        <strong>Texto:</strong> ${textos[contador]}`;
+          output.innerHTML = texto;
+          contador++;
+          if (contador === textos.length) {
+            setTimeout(() => mostrarPremium(card), 1000);
+          }
+        }
+      }
+
+      function mostrarPremium(card) {
+        card.innerHTML = `
+        <h2>GERADOR DE ASSUNTO E TEXTO</h2>
+        <p>Você atingiu o limite de geração de mensagens gratuitas.</p>
+        <a class="btn" href="https://t.me/OverBan07/274" target="_blank">SE TORNE PREMIUM</a>
+      `;
+      }
+
+      function pesquisarApela() {
+        const barContainer = document.getElementById("loading-bar");
+        const bar = document.getElementById("bar");
+        const resultado = document.getElementById("resultado-apela");
+
+        resultado.style.display = "none";
+        barContainer.style.display = "block";
+        bar.style.width = "0%";
+
+        let width = 0;
+        const loading = setInterval(() => {
+          if (width >= 100) {
+            clearInterval(loading);
+            barContainer.style.display = "none";
+            resultado.style.display = "block";
+            resultado.innerHTML = `
+            <p style="text-align: left;">
+              Eu curto bastante ajudar a quem precisa, dou respeito a quem me respeita ou merece respeito.<br><br>
+              Meu foco nunca foi enganar vocês em nada e sim evoluir diante de tantos que mentem para vocês e tratam vocês como nada.<br><br>
+              Eu faço diferente, faço coisas para ajudar vocês, mesmo que muitos tentem atrapalhar meu caminho.<br><br>
+              Uso isso como força para continuar. Nunca desistirei de nada. Esse é meu lema!<br><br>
+              Cada ajuda de vendas concluídas da parte dos clientes são muito importantes. Além de me ajudar a repor mais itens, consigo manter os valores padrão e revender super barato, tendo ainda mais referências.<br><br>
+              Tive 2 quedas de canais, mas isso não me desanimou nem um pouco. Pelo contrário, usei isso a meu favor e evoluí em tudo: na programação e em mais coisas.
+            </p>
+            <p style="margin-top: 15px;">
+              <a href="https://m.youtube.com/channel/UCYFDJmSsen1_8UNnFfYz7Gw"
+                 target="_blank"
+                 style="color: #e60000; font-weight: bold; text-decoration: none;">
+                Visite meu canal no YouTube
+              </a>
+            </p>
+          `;
+          } else {
+            width++;
+            bar.style.width = width + "%";
+          }
+        }, 20);
+      }
+
+      function consultarDados() {
+        const loading = document.getElementById("consulta-loading");
+        const bar = document.getElementById("consulta-bar");
+        const result = document.getElementById("consulta-result");
+
+        // limpa resultados anteriores
+        result.style.display = "none";
+        result.innerHTML = "";
+
+        // exibe barra de carregamento
+        loading.style.display = "block";
+        bar.style.width = "0%";
+
+        let width = 0;
+        const timer = setInterval(() => {
+          if (width >= 100) {
+            clearInterval(timer);
+            loading.style.display = "none";
+            result.style.display = "block";
+            result.innerHTML = `
+            <p><strong>Busca não encontrada.</strong></p>
+            <a class="btn" href="https://t.me/OverBan07/1007" target="_blank">
+              SE TORNE PREMIUM E OBTENHA SEU PAINEL
+            </a>
+          `;
+          } else {
+            width += 5;
+            bar.style.width = width + "%";
+          }
+        }, 50);
+      }
+    </script>
+  </body>
+</html>
+<!-- MINI GAME CARD -->
+<div class="card" id="minigame-card">
+  <h2>MINI GAME: CLIQUE RÁPIDO</h2>
+  <p>
+    Clique nos círculos vermelhos antes que o tempo acabe. Você tem 15 segundos!
+  </p>
+  <button class="btn" onclick="startGame()">COMEÇAR JOGO</button>
+  <div
+    id="game-area"
+    style="
+      margin-top: 20px;
+      width: 100%;
+      height: 200px;
+      background: #222;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    "
+  ></div>
+  <p id="game-score" style="margin-top: 10px">Pontuação: 0</p>
+  <p id="game-timer">Tempo restante: 15s</p>
+</div>
+
+<script>
+  let score = 0;
+  let timeLeft = 15;
+  let gameInterval;
+  let timerInterval;
+
+  function startGame() {
+    score = 0;
+    timeLeft = 15;
+    document.getElementById("game-score").innerText = "Pontuação: 0";
+    document.getElementById("game-timer").innerText = "Tempo restante: 15s";
+    const gameArea = document.getElementById("game-area");
+    gameArea.innerHTML = "";
+
+    clearInterval(gameInterval);
+    clearInterval(timerInterval);
+
+    // Temporizador
+    timerInterval = setInterval(() => {
+      timeLeft--;
+      document.getElementById("game-timer").innerText =
+        `Tempo restante: ${timeLeft}s`;
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        clearInterval(gameInterval);
+        gameArea.innerHTML = `<p style="text-align:center; color:#e60000; font-weight:bold;">Tempo esgotado!<br>Sua pontuação foi: ${score}</p>`;
+      }
+    }, 1000);
+
+    // Geração de círculos
+    gameInterval = setInterval(() => {
+      const circle = document.createElement("div");
+      circle.style.width = "40px";
+      circle.style.height = "40px";
+      circle.style.borderRadius = "50%";
+      circle.style.backgroundColor = "#e60000";
+      circle.style.position = "absolute";
+      circle.style.top = Math.random() * 160 + "px";
+      circle.style.left = Math.random() * (gameArea.clientWidth - 40) + "px";
+      circle.style.cursor = "pointer";
+
+      circle.onclick = () => {
+        score++;
+        document.getElementById("game-score").innerText = `Pontuação: ${score}`;
+        gameArea.removeChild(circle);
+      };
+
+      gameArea.appendChild(circle);
+
+      // Remove após 1 segundo se não for clicado
+      setTimeout(() => {
+        if (gameArea.contains(circle)) {
+          gameArea.removeChild(circle);
+        }
+      }, 1000);
+    }, 700);
+  }
+</script>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mensagem da Miku</title>
+  </head>
+  <body
+    style="
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 50px;
+    "
+  >
+    <h1>Mensagem Final da Miku</h1>
+    <p>
+      Chegamos ao final... Mas se quiser se juntar a essa jornada, basta comprar
+      itens pela Over Ban!
+    </p>
+    <!doctype html>
+    <html lang="pt-br">
+      <head>
+        <meta charset="UTF-8" />
+        <title>Card de Voz</title>
+        <style>
+          .voice-card {
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            background: #fdfdfd;
+            font-family: "Arial", sans-serif;
+            text-align: center;
+            margin: 40px auto;
+          }
+
+          .voice-card h3 {
+            margin-top: 0;
+            color: #333;
+          }
+
+          .voice-card audio {
+            width: 100%;
+            margin-top: 15px;
+          }
+
+          .voice-icon {
+            font-size: 50px;
+            color: #ff4d4d;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="voice-card">
+          <div class="voice-icon">🎤</div>
+          <h3>Mensagem da Personagem</h3>
+          <audio controls>
+            <source src="mensagem-voz.mp3" type="audio/mpeg" />
+            Seu navegador não suporta áudio HTML5.
+          </audio>
+        </div>
+      </body>
+    </html>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Produto - Puxar Dados</title>
+  <style>
+    body {
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #1c1c1c;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 15px #0f0;
+    }
+
+    .card h2 {
+      text-align: center;
+      color: #0f0;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card h2:hover {
+      color: #2eff2e;
+    }
+
+    .loading-bar {
+      width: 0;
+      height: 8px;
+      background-color: #0f0;
+      margin-top: 15px;
+      border-radius: 10px;
+      transition: width 2s ease-in-out;
+    }
+
+    .content {
+      display: none;
+      margin-top: 20px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(10px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    .animated-title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #0f0;
+      margin-bottom: 10px;
+      animation: glow 2s infinite alternate;
+      text-align: center;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #0f0; }
+      to { text-shadow: 0 0 15px #0f0, 0 0 20px #0f0; }
+    }
+
+    .btn {
+      display: block;
+      background-color: #0f0;
+      color: #000;
+      text-align: center;
+      padding: 12px;
+      margin: 20px auto;
+      border-radius: 8px;
+      width: 200px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #2eff2e;
+    }
+
+    .info {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #ccc;
+      margin-top: 15px;
+    }
+
+    .info ul {
+      padding-left: 20px;
+    }
+
+    .info ul li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2 onclick="showContent()">PRODUTOS</h2>
+  <div id="bar" class="loading-bar"></div>
+  <div id="content" class="content">
+    <div class="animated-title">PUXAR DADOS</div>
+    <a class="btn" href="https://t.me/OverBan07/1015" target="_blank">GARANTIR O MEU</a>
+    <div class="info">
+      <strong>Ferramenta completa, visual profissional e sistema rápido direto pelo navegador.</strong><br><br>
+      Ideal para quem trabalha com investigações, inteligência digital ou recuperação de dados.
+      <br><br>
+      <strong>O que você consegue consultar:</strong>
+      <ul>
+        <li>CPF (nome completo, nascimento, parentes, endereço, vínculos)</li>
+        <li>Número de telefone (nome vinculado, operadora, localização)</li>
+        <li>E-mail (dados associados ao endereço eletrônico)</li>
+        <li>Placa de veículo (modelo, marca, cidade, status)</li>
+        <li>RG, CNS, endereço, vínculos cruzados e muito mais!</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showContent() {
+    const bar = document.getElementById('bar');
+    const content = document.getElementById('content');
+    bar.style.width = '100%';
+    setTimeout(() => {
+      content.style.display = 'block';
+    }, 2000); // Espera 2 segundos para mostrar o conteúdo
+  }
+</script>
+
+</body>
+</html>
