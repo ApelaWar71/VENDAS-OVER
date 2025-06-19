@@ -3,54 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Referências e Redes</title>
+    <title>Over Ban - Referências e Suporte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
-        background-color: #111;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #0d0d0d; /* Um preto ainda mais profundo */
+        font-family: "Poppins", sans-serif; /* Nova fonte para o corpo */
         margin: 0;
         padding: 40px 20px;
-        color: #fff;
+        color: #e0e0e0; /* Branco suave para o texto */
         display: flex;
         flex-direction: column;
         align-items: center;
       }
 
       h1 {
+        font-family: "Montserrat", sans-serif; /* Nova fonte para títulos */
         color: #e60000;
         margin-bottom: 40px;
-        font-size: 2.5em;
-        letter-spacing: 2px;
+        font-size: 2.8em; /* Levemente maior */
+        letter-spacing: 3px; /* Mais espaçamento para impacto */
         text-align: center;
+        text-shadow: 0 0 10px rgba(230, 0, 0, 0.5); /* Sutil brilho no título */
       }
 
       .card {
-        background-color: #1b1b1b;
+        background-color: #1a1a1a; /* Fundo do card um pouco mais escuro */
         border: 1px solid #e60000;
-        border-radius: 12px;
-        padding: 30px 40px;
-        max-width: 400px;
+        border-radius: 15px; /* Bordas mais arredondadas */
+        padding: 35px 45px; /* Mais padding */
+        max-width: 450px; /* Levemente mais largo */
         width: 90%;
         text-align: center;
-        box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
-        margin-bottom: 30px;
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); /* Sombra mais pronunciada */
+        margin-bottom: 35px; /* Mais espaço entre cards */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições para hover */
+      }
+
+      .card:hover {
+        transform: translateY(-5px); /* Efeito de elevação */
+        box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5); /* Sombra maior no hover */
+      }
+
+      .card h2 {
+        font-family: "Montserrat", sans-serif;
+        color: #e60000;
+        margin-bottom: 20px;
+        font-size: 1.8em;
+        position: relative; /* Para ícones */
       }
 
       .btn {
         display: inline-block;
-        margin-top: 15px;
-        padding: 12px 25px;
+        margin-top: 20px; /* Mais espaço */
+        padding: 14px 30px; /* Botões maiores */
         background-color: #e60000;
         color: #fff;
         font-weight: bold;
         text-decoration: none;
-        border-radius: 8px;
-        transition: background 0.3s ease;
+        border-radius: 10px; /* Bordas mais arredondadas */
+        transition: background 0.3s ease, transform 0.2s ease,
+          box-shadow 0.3s ease;
         cursor: pointer;
+        letter-spacing: 1px; /* Mais espaçamento entre letras */
+        text-transform: uppercase; /* Texto em maiúsculas */
       }
 
       .btn:hover {
-        background-color: #ff1a1a;
+        background-color: #ff3333; /* Vermelho mais claro no hover */
+        transform: translateY(-3px); /* Efeito de elevação no hover */
+        box-shadow: 0 8px 15px rgba(255, 0, 0, 0.4);
       }
 
       .links {
@@ -61,21 +88,24 @@
       }
 
       .links a {
-        background-color: #2a2a2a;
-        padding: 10px;
-        border-radius: 8px;
-        color: #fff;
+        background-color: #262626; /* Fundo dos links um pouco mais escuro */
+        padding: 12px; /* Mais padding */
+        border-radius: 10px; /* Mais arredondado */
+        color: #e0e0e0;
         text-decoration: none;
-        transition: background 0.3s;
-        font-weight: bold;
+        transition: background 0.3s, transform 0.2s ease;
+        font-weight: 600; /* Mais negrito */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
       }
 
       .links a:hover {
         background-color: #e60000;
+        transform: translateX(5px); /* Efeito de deslize */
+        box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
       }
 
       .creator {
-        margin-top: 30px;
+        margin-top: 35px; /* Mais espaço */
         background: linear-gradient(145deg, #1e1e1e, #151515);
         border: 2px solid #e60000;
         padding: 20px 30px;
@@ -97,6 +127,180 @@
       .creator:hover {
         transform: rotateY(10deg) scale(1.05);
         box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+      }
+
+      /* Styles for Mini Game Card */
+      #game-area {
+        margin-top: 20px;
+        width: 100%;
+        height: 200px;
+        background: #222;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #game-score,
+      #game-timer {
+        margin-top: 10px;
+        font-weight: 600;
+      }
+
+      /* Styles for Miku Message and Voice Card */
+      .miku-section {
+        background-color: #0d0d0d;
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+        width: 100%;
+        max-width: 600px;
+        margin-top: 35px; /* Mais espaço */
+      }
+
+      .miku-section h1 {
+        color: #e60000;
+        font-size: 2.2em; /* Um pouco menor que o principal h1 */
+      }
+
+      .voice-card {
+        width: 90%;
+        max-width: 300px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        padding: 25px;
+        background: #f0f0f0; /* Fundo mais claro para destaque */
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        margin: 40px auto;
+      }
+
+      .voice-card h3 {
+        margin-top: 0;
+        color: #333;
+        font-size: 1.4em;
+      }
+
+      .voice-card audio {
+        width: 100%;
+        margin-top: 15px;
+      }
+
+      .voice-icon {
+        font-size: 55px; /* Ícone um pouco maior */
+        color: #ff4d4d; /* Cor original, que combina com vermelho */
+        margin-bottom: 10px;
+      }
+
+      /* Styles for Product Card */
+      .product-card {
+        background-color: #1a1a1a;
+        border-radius: 15px;
+        padding: 35px 45px;
+        max-width: 450px;
+        width: 90%;
+        margin-top: 35px; /* Mais espaço */
+        border: 1px solid #00c0ff; /* Borda com a nova cor de acento */
+        box-shadow: 0 0 20px rgba(0, 192, 255, 0.5); /* Brilho azul */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 192, 255, 0.7);
+      }
+
+      .product-card h2 {
+        color: #00c0ff; /* Título azul */
+        margin-bottom: 20px;
+      }
+
+      .product-card .loading-bar {
+        width: 0;
+        height: 10px; /* Mais espessa */
+        background-color: #00c0ff; /* Cor da barra azul */
+        margin-top: 15px;
+        border-radius: 10px;
+        transition: width 2s ease-in-out;
+      }
+
+      .product-card .content {
+        display: none;
+        margin-top: 20px;
+        animation: fadeIn 1.5s ease forwards;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animated-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 24px; /* Levemente maior */
+        font-weight: bold;
+        color: #00c0ff; /* Título animado azul */
+        margin-bottom: 15px; /* Mais espaço */
+        animation: glow-blue 2s infinite alternate;
+        text-align: center;
+      }
+
+      @keyframes glow-blue {
+        from {
+          text-shadow: 0 0 5px #00c0ff;
+        }
+        to {
+          text-shadow: 0 0 15px #00c0ff, 0 0 20px #00c0ff;
+        }
+      }
+
+      .product-card .btn {
+        background-color: #00c0ff; /* Botão azul */
+        color: #111; /* Texto escuro no botão azul */
+        box-shadow: 0 0 15px rgba(0, 192, 255, 0.2);
+      }
+
+      .product-card .btn:hover {
+        background-color: #33e0ff; /* Azul mais claro no hover */
+        box-shadow: 0 8px 15px rgba(0, 192, 255, 0.4);
+      }
+
+      .info {
+        font-size: 16px; /* Texto um pouco maior */
+        line-height: 1.7; /* Mais espaçamento entre linhas */
+        color: #c0c0c0; /* Cinza um pouco mais claro */
+        margin-top: 15px;
+        text-align: left;
+      }
+
+      .info ul {
+        padding-left: 25px; /* Mais padding na lista */
+      }
+
+      .info ul li {
+        margin-bottom: 10px; /* Mais espaço entre itens da lista */
+      }
+
+      /* Estilo para inputs de formulário para consistência */
+      input[type="text"] {
+        font-family: "Poppins", sans-serif;
+        font-size: 1em;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #444;
+        background: #222;
+        color: #fff;
+        box-sizing: border-box; /* Garante que padding não aumente a largura total */
+      }
+
+      label {
+        font-size: 0.95em;
+        margin-bottom: 5px;
       }
     </style>
   </head>
@@ -138,14 +342,10 @@
     <div class="card">
       <h2>PLAYLIST DO YOUTUBE</h2>
       <div class="links">
-        <a
-          href="https://youtube.com/playlist?list=PL_f7RUqsnlcF5inJCuZdVsN-jd4qsTXNM&si=1wKVTo4OUVgLIbkF"
-          target="_blank"
+        <a href="https://youtube.com/playlist?list=PL_f7RUqsnlcF5inJCuZdVsN-jd4qsTXNM&si=1wKVTo4OUVgLIbkF" target="_blank"
           >Temas Xiaomi</a
         >
-        <a
-          href="https://youtu.be/Ofcj5Z1BLxc?si=T8uffoqmoCrg72BY"
-          target="_blank"
+        <a href="https://youtu.be/Ofcj5Z1BLxc?si=T8uffoqmoCrg72BY" target="_blank"
           >Vídeos Desbanir WhatsApp</a
         >
       </div>
@@ -217,7 +417,6 @@
       <div id="resultado-apela" style="margin-top: 20px; display: none"></div>
     </div>
 
-    <!-- NOVO CARD: CONSULTAR DADOS -->
     <div class="card" id="consulta-card">
       <h2>CONSULTAR DADOS</h2>
       <p>Escolha o tipo e insira a informação para consulta:</p>
@@ -278,7 +477,62 @@
       ></div>
     </div>
 
+    <div class="card" id="minigame-card">
+      <h2>MINI GAME: CLIQUE RÁPIDO</h2>
+      <p>
+        Clique nos círculos vermelhos antes que o tempo acabe. Você tem 15
+        segundos!
+      </p>
+      <button class="btn" onclick="startGame()">COMEÇAR JOGO</button>
+      <div id="game-area"></div>
+      <p id="game-score">Pontuação: 0</p>
+      <p id="game-timer">Tempo restante: 15s</p>
+    </div>
+
+    <div class="miku-section">
+      <h1>Mensagem Final da Miku</h1>
+      <p>
+        Chegamos ao final... Mas se quiser se juntar a essa jornada, basta
+        comprar itens pela Over Ban!
+      </p>
+      <div class="voice-card">
+        <div class="voice-icon">🎤</div>
+        <h3>Mensagem da Personagem</h3>
+        <audio controls>
+          <source src="mensagem-voz.mp3" type="audio/mpeg" />
+          Seu navegador não suporta áudio HTML5.
+        </audio>
+      </div>
+    </div>
+
+    <div class="card product-card">
+      <h2 onclick="showContent()">PRODUTOS</h2>
+      <div id="bar-product" class="loading-bar"></div>
+      <div id="content-product" class="content">
+        <div class="animated-title">PUXAR DADOS</div>
+        <a class="btn" href="https://t.me/OverBan07/1015" target="_blank"
+          >GARANTIR O MEU</a
+        >
+        <div class="info">
+          <strong>Ferramenta completa, visual profissional e sistema rápido
+            direto pelo navegador.</strong><br /><br />
+          Ideal para quem trabalha com investigações, inteligência digital ou
+          recuperação de dados.
+          <br /><br />
+          <strong>O que você consegue consultar:</strong>
+          <ul>
+            <li>CPF (nome completo, nascimento, parentes, endereço, vínculos)</li>
+            <li>Número de telefone (nome vinculado, operadora, localização)</li>
+            <li>E-mail (dados associados ao endereço eletrônico)</li>
+            <li>Placa de veículo (modelo, marca, cidade, status)</li>
+            <li>RG, CNS, endereço, vínculos cruzados e muito mais!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <script>
+      // SCRIPT FOR GERADOR DE ASSUNTO E TEXTO
       const textos = [
         "Preciso de ajuda, meu WhatsApp foi banido repentinamente!",
         "Fui banido injustamente e preciso de suporte urgente!",
@@ -312,6 +566,7 @@
       `;
       }
 
+      // SCRIPT FOR PESQUISAR SOBRE O APELA WAR
       function pesquisarApela() {
         const barContainer = document.getElementById("loading-bar");
         const bar = document.getElementById("bar");
@@ -351,6 +606,7 @@
         }, 20);
       }
 
+      // SCRIPT FOR CONSULTAR DADOS
       function consultarDados() {
         const loading = document.getElementById("consulta-loading");
         const bar = document.getElementById("consulta-bar");
@@ -382,290 +638,73 @@
           }
         }, 50);
       }
+
+      // SCRIPT FOR MINI GAME
+      let score = 0;
+      let timeLeft = 15;
+      let gameInterval;
+      let timerInterval;
+
+      function startGame() {
+        score = 0;
+        timeLeft = 15;
+        document.getElementById("game-score").innerText = "Pontuação: 0";
+        document.getElementById("game-timer").innerText = "Tempo restante: 15s";
+        const gameArea = document.getElementById("game-area");
+        gameArea.innerHTML = "";
+
+        clearInterval(gameInterval);
+        clearInterval(timerInterval);
+
+        // Temporizador
+        timerInterval = setInterval(() => {
+          timeLeft--;
+          document.getElementById("game-timer").innerText = `Tempo restante: ${timeLeft}s`;
+          if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            clearInterval(gameInterval);
+            gameArea.innerHTML = `<p style="text-align:center; color:#e60000; font-weight:bold;">Tempo esgotado!<br>Sua pontuação foi: ${score}</p>`;
+          }
+        }, 1000);
+
+        // Geração de círculos
+        gameInterval = setInterval(() => {
+          const circle = document.createElement("div");
+          circle.style.width = "40px";
+          circle.style.height = "40px";
+          circle.style.borderRadius = "50%";
+          circle.style.backgroundColor = "#e60000";
+          circle.style.position = "absolute";
+          circle.style.top = Math.random() * 160 + "px";
+          circle.style.left = Math.random() * (gameArea.clientWidth - 40) + "px";
+          circle.style.cursor = "pointer";
+
+          circle.onclick = () => {
+            score++;
+            document.getElementById("game-score").innerText = `Pontuação: ${score}`;
+            gameArea.removeChild(circle);
+          };
+
+          gameArea.appendChild(circle);
+
+          // Remove após 1 segundo se não for clicado
+          setTimeout(() => {
+            if (gameArea.contains(circle)) {
+              gameArea.removeChild(circle);
+            }
+          }, 1000);
+        }, 700);
+      }
+
+      // SCRIPT FOR PRODUTOS CARD
+      function showContent() {
+        const bar = document.getElementById("bar-product"); // Changed ID to avoid conflict
+        const content = document.getElementById("content-product"); // Changed ID to avoid conflict
+        bar.style.width = "100%";
+        setTimeout(() => {
+          content.style.display = "block";
+        }, 2000); // Espera 2 segundos para mostrar o conteúdo
+      }
     </script>
   </body>
-</html>
-<!-- MINI GAME CARD -->
-<div class="card" id="minigame-card">
-  <h2>MINI GAME: CLIQUE RÁPIDO</h2>
-  <p>
-    Clique nos círculos vermelhos antes que o tempo acabe. Você tem 15 segundos!
-  </p>
-  <button class="btn" onclick="startGame()">COMEÇAR JOGO</button>
-  <div
-    id="game-area"
-    style="
-      margin-top: 20px;
-      width: 100%;
-      height: 200px;
-      background: #222;
-      border-radius: 12px;
-      position: relative;
-      overflow: hidden;
-    "
-  ></div>
-  <p id="game-score" style="margin-top: 10px">Pontuação: 0</p>
-  <p id="game-timer">Tempo restante: 15s</p>
-</div>
-
-<script>
-  let score = 0;
-  let timeLeft = 15;
-  let gameInterval;
-  let timerInterval;
-
-  function startGame() {
-    score = 0;
-    timeLeft = 15;
-    document.getElementById("game-score").innerText = "Pontuação: 0";
-    document.getElementById("game-timer").innerText = "Tempo restante: 15s";
-    const gameArea = document.getElementById("game-area");
-    gameArea.innerHTML = "";
-
-    clearInterval(gameInterval);
-    clearInterval(timerInterval);
-
-    // Temporizador
-    timerInterval = setInterval(() => {
-      timeLeft--;
-      document.getElementById("game-timer").innerText =
-        `Tempo restante: ${timeLeft}s`;
-      if (timeLeft <= 0) {
-        clearInterval(timerInterval);
-        clearInterval(gameInterval);
-        gameArea.innerHTML = `<p style="text-align:center; color:#e60000; font-weight:bold;">Tempo esgotado!<br>Sua pontuação foi: ${score}</p>`;
-      }
-    }, 1000);
-
-    // Geração de círculos
-    gameInterval = setInterval(() => {
-      const circle = document.createElement("div");
-      circle.style.width = "40px";
-      circle.style.height = "40px";
-      circle.style.borderRadius = "50%";
-      circle.style.backgroundColor = "#e60000";
-      circle.style.position = "absolute";
-      circle.style.top = Math.random() * 160 + "px";
-      circle.style.left = Math.random() * (gameArea.clientWidth - 40) + "px";
-      circle.style.cursor = "pointer";
-
-      circle.onclick = () => {
-        score++;
-        document.getElementById("game-score").innerText = `Pontuação: ${score}`;
-        gameArea.removeChild(circle);
-      };
-
-      gameArea.appendChild(circle);
-
-      // Remove após 1 segundo se não for clicado
-      setTimeout(() => {
-        if (gameArea.contains(circle)) {
-          gameArea.removeChild(circle);
-        }
-      }, 1000);
-    }, 700);
-  }
-</script>
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Mensagem da Miku</title>
-  </head>
-  <body
-    style="
-      background-color: #111;
-      color: white;
-      text-align: center;
-      padding: 50px;
-    "
-  >
-    <h1>Mensagem Final da Miku</h1>
-    <p>
-      Chegamos ao final... Mas se quiser se juntar a essa jornada, basta comprar
-      itens pela Over Ban!
-    </p>
-    <!doctype html>
-    <html lang="pt-br">
-      <head>
-        <meta charset="UTF-8" />
-        <title>Card de Voz</title>
-        <style>
-          .voice-card {
-            width: 300px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            background: #fdfdfd;
-            font-family: "Arial", sans-serif;
-            text-align: center;
-            margin: 40px auto;
-          }
-
-          .voice-card h3 {
-            margin-top: 0;
-            color: #333;
-          }
-
-          .voice-card audio {
-            width: 100%;
-            margin-top: 15px;
-          }
-
-          .voice-icon {
-            font-size: 50px;
-            color: #ff4d4d;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="voice-card">
-          <div class="voice-icon">🎤</div>
-          <h3>Mensagem da Personagem</h3>
-          <audio controls>
-            <source src="mensagem-voz.mp3" type="audio/mpeg" />
-            Seu navegador não suporta áudio HTML5.
-          </audio>
-        </div>
-      </body>
-    </html>
-  </body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Card Produto - Puxar Dados</title>
-  <style>
-    body {
-      background-color: #111;
-      font-family: Arial, sans-serif;
-      color: #fff;
-      padding: 20px;
-    }
-
-    .card {
-      background-color: #1c1c1c;
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 600px;
-      margin: auto;
-      box-shadow: 0 0 15px #0f0;
-    }
-
-    .card h2 {
-      text-align: center;
-      color: #0f0;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .card h2:hover {
-      color: #2eff2e;
-    }
-
-    .loading-bar {
-      width: 0;
-      height: 8px;
-      background-color: #0f0;
-      margin-top: 15px;
-      border-radius: 10px;
-      transition: width 2s ease-in-out;
-    }
-
-    .content {
-      display: none;
-      margin-top: 20px;
-      animation: fadeIn 1.5s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      0% {opacity: 0; transform: translateY(10px);}
-      100% {opacity: 1; transform: translateY(0);}
-    }
-
-    .animated-title {
-      font-size: 22px;
-      font-weight: bold;
-      color: #0f0;
-      margin-bottom: 10px;
-      animation: glow 2s infinite alternate;
-      text-align: center;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 5px #0f0; }
-      to { text-shadow: 0 0 15px #0f0, 0 0 20px #0f0; }
-    }
-
-    .btn {
-      display: block;
-      background-color: #0f0;
-      color: #000;
-      text-align: center;
-      padding: 12px;
-      margin: 20px auto;
-      border-radius: 8px;
-      width: 200px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #2eff2e;
-    }
-
-    .info {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #ccc;
-      margin-top: 15px;
-    }
-
-    .info ul {
-      padding-left: 20px;
-    }
-
-    .info ul li {
-      margin-bottom: 8px;
-    }
-  </style>
-</head>
-<body>
-
-<div class="card">
-  <h2 onclick="showContent()">PRODUTOS</h2>
-  <div id="bar" class="loading-bar"></div>
-  <div id="content" class="content">
-    <div class="animated-title">PUXAR DADOS</div>
-    <a class="btn" href="https://t.me/OverBan07/1015" target="_blank">GARANTIR O MEU</a>
-    <div class="info">
-      <strong>Ferramenta completa, visual profissional e sistema rápido direto pelo navegador.</strong><br><br>
-      Ideal para quem trabalha com investigações, inteligência digital ou recuperação de dados.
-      <br><br>
-      <strong>O que você consegue consultar:</strong>
-      <ul>
-        <li>CPF (nome completo, nascimento, parentes, endereço, vínculos)</li>
-        <li>Número de telefone (nome vinculado, operadora, localização)</li>
-        <li>E-mail (dados associados ao endereço eletrônico)</li>
-        <li>Placa de veículo (modelo, marca, cidade, status)</li>
-        <li>RG, CNS, endereço, vínculos cruzados e muito mais!</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<script>
-  function showContent() {
-    const bar = document.getElementById('bar');
-    const content = document.getElementById('content');
-    bar.style.width = '100%';
-    setTimeout(() => {
-      content.style.display = 'block';
-    }, 2000); // Espera 2 segundos para mostrar o conteúdo
-  }
-</script>
-
-</body>
 </html>
